@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7BB3D0B1CA2E4090007DD93 /* breast_cancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D0A1CA2E4090007DD93 /* breast_cancerTests.swift */; };
+		A7BB3D161CA2E4090007DD93 /* breast_cancerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D151CA2E4090007DD93 /* breast_cancerUITests.swift */; };
+		A7BB3D351CA2E4610007DD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D241CA2E4610007DD93 /* AppDelegate.swift */; };
+		A7BB3D361CA2E4610007DD93 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D251CA2E4610007DD93 /* ConsentDocument.swift */; };
+		A7BB3D371CA2E4610007DD93 /* ExampleSurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D261CA2E4610007DD93 /* ExampleSurveyTask.swift */; };
+		A7BB3D381CA2E4610007DD93 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D271CA2E4610007DD93 /* Task.swift */; };
+		A7BB3D391CA2E4610007DD93 /* ChartDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D281CA2E4610007DD93 /* ChartDataSources.swift */; };
+		A7BB3D3A1CA2E4610007DD93 /* ChartTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D291CA2E4610007DD93 /* ChartTableViewCells.swift */; };
+		A7BB3D3B1CA2E4610007DD93 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D2A1CA2E4610007DD93 /* ImageTableViewCell.swift */; };
+		A7BB3D3C1CA2E4610007DD93 /* ResultTableViewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D2B1CA2E4610007DD93 /* ResultTableViewProviders.swift */; };
+		A7BB3D3D1CA2E4610007DD93 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D2C1CA2E4610007DD93 /* ResultViewController.swift */; };
+		A7BB3D3E1CA2E4610007DD93 /* TextImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D2D1CA2E4610007DD93 /* TextImageTableViewCell.swift */; };
+		A7BB3D3F1CA2E4610007DD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7BB3D2E1CA2E4610007DD93 /* Assets.xcassets */; };
+		A7BB3D401CA2E4610007DD93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BB3D2F1CA2E4610007DD93 /* LaunchScreen.storyboard */; };
+		A7BB3D411CA2E4610007DD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BB3D301CA2E4610007DD93 /* Main.storyboard */; };
+		A7BB3D421CA2E4610007DD93 /* AtividadesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D311CA2E4610007DD93 /* AtividadesTableViewController.swift */; };
+		A7BB3D431CA2E4610007DD93 /* InfograficosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D321CA2E4610007DD93 /* InfograficosViewController.swift */; };
+		A7BB3D441CA2E4610007DD93 /* ConhecaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D331CA2E4610007DD93 /* ConhecaTableViewController.swift */; };
+		A7BB3D451CA2E4610007DD93 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D341CA2E4610007DD93 /* PerfilViewController.swift */; };
+		A7BB3D5A1CA2E5380007DD93 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BB3D571CA2E50B0007DD93 /* ResearchKit.framework */; };
+		A7BB3D5B1CA2E5390007DD93 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7BB3D571CA2E50B0007DD93 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7BB3D071CA2E4090007DD93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7BB3CEA1CA2E4080007DD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7BB3CF11CA2E4080007DD93;
+			remoteInfo = "breast-cancer";
+		};
+		A7BB3D121CA2E4090007DD93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7BB3CEA1CA2E4080007DD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7BB3CF11CA2E4080007DD93;
+			remoteInfo = "breast-cancer";
+		};
+		A7BB3D561CA2E50B0007DD93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		A7BB3D581CA2E50B0007DD93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		A7BB3D5C1CA2E5390007DD93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A7BB3D5E1CA2E5390007DD93 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A7BB3D5B1CA2E5390007DD93 /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A7BB3CF21CA2E4080007DD93 /* breast-cancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "breast-cancer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7BB3D011CA2E4080007DD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7BB3D061CA2E4090007DD93 /* breast-cancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "breast-cancerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7BB3D0A1CA2E4090007DD93 /* breast_cancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = breast_cancerTests.swift; sourceTree = "<group>"; };
+		A7BB3D0C1CA2E4090007DD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7BB3D111CA2E4090007DD93 /* breast-cancerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "breast-cancerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7BB3D151CA2E4090007DD93 /* breast_cancerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = breast_cancerUITests.swift; sourceTree = "<group>"; };
+		A7BB3D171CA2E4090007DD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7BB3D231CA2E45F0007DD93 /* breast-cancer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "breast-cancer-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7BB3D241CA2E4610007DD93 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7BB3D251CA2E4610007DD93 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		A7BB3D261CA2E4610007DD93 /* ExampleSurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSurveyTask.swift; sourceTree = "<group>"; };
+		A7BB3D271CA2E4610007DD93 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		A7BB3D281CA2E4610007DD93 /* ChartDataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataSources.swift; sourceTree = "<group>"; };
+		A7BB3D291CA2E4610007DD93 /* ChartTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartTableViewCells.swift; sourceTree = "<group>"; };
+		A7BB3D2A1CA2E4610007DD93 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		A7BB3D2B1CA2E4610007DD93 /* ResultTableViewProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewProviders.swift; sourceTree = "<group>"; };
+		A7BB3D2C1CA2E4610007DD93 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		A7BB3D2D1CA2E4610007DD93 /* TextImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextImageTableViewCell.swift; sourceTree = "<group>"; };
+		A7BB3D2E1CA2E4610007DD93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7BB3D2F1CA2E4610007DD93 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7BB3D301CA2E4610007DD93 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A7BB3D311CA2E4610007DD93 /* AtividadesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadesTableViewController.swift; sourceTree = "<group>"; };
+		A7BB3D321CA2E4610007DD93 /* InfograficosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfograficosViewController.swift; sourceTree = "<group>"; };
+		A7BB3D331CA2E4610007DD93 /* ConhecaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConhecaTableViewController.swift; sourceTree = "<group>"; };
+		A7BB3D341CA2E4610007DD93 /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7BB3CEF1CA2E4080007DD93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BB3D5A1CA2E5380007DD93 /* ResearchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BB3D031CA2E4090007DD93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BB3D0E1CA2E4090007DD93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7BB3CE91CA2E4080007DD93 = {
+			isa = PBXGroup;
+			children = (
+				A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */,
+				A7BB3CF41CA2E4080007DD93 /* breast-cancer */,
+				A7BB3D091CA2E4090007DD93 /* breast-cancerTests */,
+				A7BB3D141CA2E4090007DD93 /* breast-cancerUITests */,
+				A7BB3CF31CA2E4080007DD93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7BB3CF31CA2E4080007DD93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7BB3CF21CA2E4080007DD93 /* breast-cancer.app */,
+				A7BB3D061CA2E4090007DD93 /* breast-cancerTests.xctest */,
+				A7BB3D111CA2E4090007DD93 /* breast-cancerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7BB3CF41CA2E4080007DD93 /* breast-cancer */ = {
+			isa = PBXGroup;
+			children = (
+				A7BB3D241CA2E4610007DD93 /* AppDelegate.swift */,
+				A7BB3D251CA2E4610007DD93 /* ConsentDocument.swift */,
+				A7BB3D261CA2E4610007DD93 /* ExampleSurveyTask.swift */,
+				A7BB3D271CA2E4610007DD93 /* Task.swift */,
+				A7BB3D281CA2E4610007DD93 /* ChartDataSources.swift */,
+				A7BB3D291CA2E4610007DD93 /* ChartTableViewCells.swift */,
+				A7BB3D2A1CA2E4610007DD93 /* ImageTableViewCell.swift */,
+				A7BB3D2B1CA2E4610007DD93 /* ResultTableViewProviders.swift */,
+				A7BB3D2C1CA2E4610007DD93 /* ResultViewController.swift */,
+				A7BB3D2D1CA2E4610007DD93 /* TextImageTableViewCell.swift */,
+				A7BB3D2E1CA2E4610007DD93 /* Assets.xcassets */,
+				A7BB3D2F1CA2E4610007DD93 /* LaunchScreen.storyboard */,
+				A7BB3D301CA2E4610007DD93 /* Main.storyboard */,
+				A7BB3D311CA2E4610007DD93 /* AtividadesTableViewController.swift */,
+				A7BB3D321CA2E4610007DD93 /* InfograficosViewController.swift */,
+				A7BB3D331CA2E4610007DD93 /* ConhecaTableViewController.swift */,
+				A7BB3D341CA2E4610007DD93 /* PerfilViewController.swift */,
+				A7BB3D011CA2E4080007DD93 /* Info.plist */,
+				A7BB3D231CA2E45F0007DD93 /* breast-cancer-Bridging-Header.h */,
+			);
+			path = "breast-cancer";
+			sourceTree = "<group>";
+		};
+		A7BB3D091CA2E4090007DD93 /* breast-cancerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7BB3D0A1CA2E4090007DD93 /* breast_cancerTests.swift */,
+				A7BB3D0C1CA2E4090007DD93 /* Info.plist */,
+			);
+			path = "breast-cancerTests";
+			sourceTree = "<group>";
+		};
+		A7BB3D141CA2E4090007DD93 /* breast-cancerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A7BB3D151CA2E4090007DD93 /* breast_cancerUITests.swift */,
+				A7BB3D171CA2E4090007DD93 /* Info.plist */,
+			);
+			path = "breast-cancerUITests";
+			sourceTree = "<group>";
+		};
+		A7BB3D511CA2E50B0007DD93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7BB3D571CA2E50B0007DD93 /* ResearchKit.framework */,
+				A7BB3D591CA2E50B0007DD93 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7BB3CF11CA2E4080007DD93 /* breast-cancer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7BB3D1A1CA2E4090007DD93 /* Build configuration list for PBXNativeTarget "breast-cancer" */;
+			buildPhases = (
+				A7BB3CEE1CA2E4080007DD93 /* Sources */,
+				A7BB3CEF1CA2E4080007DD93 /* Frameworks */,
+				A7BB3CF01CA2E4080007DD93 /* Resources */,
+				A7BB3D5E1CA2E5390007DD93 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7BB3D5D1CA2E5390007DD93 /* PBXTargetDependency */,
+			);
+			name = "breast-cancer";
+			productName = "breast-cancer";
+			productReference = A7BB3CF21CA2E4080007DD93 /* breast-cancer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A7BB3D051CA2E4090007DD93 /* breast-cancerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7BB3D1D1CA2E4090007DD93 /* Build configuration list for PBXNativeTarget "breast-cancerTests" */;
+			buildPhases = (
+				A7BB3D021CA2E4090007DD93 /* Sources */,
+				A7BB3D031CA2E4090007DD93 /* Frameworks */,
+				A7BB3D041CA2E4090007DD93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7BB3D081CA2E4090007DD93 /* PBXTargetDependency */,
+			);
+			name = "breast-cancerTests";
+			productName = "breast-cancerTests";
+			productReference = A7BB3D061CA2E4090007DD93 /* breast-cancerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A7BB3D101CA2E4090007DD93 /* breast-cancerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7BB3D201CA2E4090007DD93 /* Build configuration list for PBXNativeTarget "breast-cancerUITests" */;
+			buildPhases = (
+				A7BB3D0D1CA2E4090007DD93 /* Sources */,
+				A7BB3D0E1CA2E4090007DD93 /* Frameworks */,
+				A7BB3D0F1CA2E4090007DD93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7BB3D131CA2E4090007DD93 /* PBXTargetDependency */,
+			);
+			name = "breast-cancerUITests";
+			productName = "breast-cancerUITests";
+			productReference = A7BB3D111CA2E4090007DD93 /* breast-cancerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7BB3CEA1CA2E4080007DD93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = LIKA;
+				TargetAttributes = {
+					A7BB3CF11CA2E4080007DD93 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					A7BB3D051CA2E4090007DD93 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = A7BB3CF11CA2E4080007DD93;
+					};
+					A7BB3D101CA2E4090007DD93 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = A7BB3CF11CA2E4080007DD93;
+					};
+				};
+			};
+			buildConfigurationList = A7BB3CED1CA2E4080007DD93 /* Build configuration list for PBXProject "breast-cancer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7BB3CE91CA2E4080007DD93;
+			productRefGroup = A7BB3CF31CA2E4080007DD93 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A7BB3D511CA2E50B0007DD93 /* Products */;
+					ProjectRef = A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A7BB3CF11CA2E4080007DD93 /* breast-cancer */,
+				A7BB3D051CA2E4090007DD93 /* breast-cancerTests */,
+				A7BB3D101CA2E4090007DD93 /* breast-cancerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A7BB3D571CA2E50B0007DD93 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = A7BB3D561CA2E50B0007DD93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7BB3D591CA2E50B0007DD93 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = A7BB3D581CA2E50B0007DD93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7BB3CF01CA2E4080007DD93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BB3D411CA2E4610007DD93 /* Main.storyboard in Resources */,
+				A7BB3D3F1CA2E4610007DD93 /* Assets.xcassets in Resources */,
+				A7BB3D401CA2E4610007DD93 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BB3D041CA2E4090007DD93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BB3D0F1CA2E4090007DD93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7BB3CEE1CA2E4080007DD93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BB3D3B1CA2E4610007DD93 /* ImageTableViewCell.swift in Sources */,
+				A7BB3D3C1CA2E4610007DD93 /* ResultTableViewProviders.swift in Sources */,
+				A7BB3D3E1CA2E4610007DD93 /* TextImageTableViewCell.swift in Sources */,
+				A7BB3D3A1CA2E4610007DD93 /* ChartTableViewCells.swift in Sources */,
+				A7BB3D381CA2E4610007DD93 /* Task.swift in Sources */,
+				A7BB3D441CA2E4610007DD93 /* ConhecaTableViewController.swift in Sources */,
+				A7BB3D421CA2E4610007DD93 /* AtividadesTableViewController.swift in Sources */,
+				A7BB3D351CA2E4610007DD93 /* AppDelegate.swift in Sources */,
+				A7BB3D361CA2E4610007DD93 /* ConsentDocument.swift in Sources */,
+				A7BB3D431CA2E4610007DD93 /* InfograficosViewController.swift in Sources */,
+				A7BB3D391CA2E4610007DD93 /* ChartDataSources.swift in Sources */,
+				A7BB3D371CA2E4610007DD93 /* ExampleSurveyTask.swift in Sources */,
+				A7BB3D451CA2E4610007DD93 /* PerfilViewController.swift in Sources */,
+				A7BB3D3D1CA2E4610007DD93 /* ResultViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BB3D021CA2E4090007DD93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BB3D0B1CA2E4090007DD93 /* breast_cancerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BB3D0D1CA2E4090007DD93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BB3D161CA2E4090007DD93 /* breast_cancerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7BB3D081CA2E4090007DD93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7BB3CF11CA2E4080007DD93 /* breast-cancer */;
+			targetProxy = A7BB3D071CA2E4090007DD93 /* PBXContainerItemProxy */;
+		};
+		A7BB3D131CA2E4090007DD93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7BB3CF11CA2E4080007DD93 /* breast-cancer */;
+			targetProxy = A7BB3D121CA2E4090007DD93 /* PBXContainerItemProxy */;
+		};
+		A7BB3D5D1CA2E5390007DD93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = A7BB3D5C1CA2E5390007DD93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A7BB3D181CA2E4090007DD93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A7BB3D191CA2E4090007DD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7BB3D1B1CA2E4090007DD93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "breast-cancer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LIKA.breast-cancer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "breast-cancer/breast-cancer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A7BB3D1C1CA2E4090007DD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "breast-cancer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LIKA.breast-cancer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "breast-cancer/breast-cancer-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		A7BB3D1E1CA2E4090007DD93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "breast-cancerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LIKA.breast-cancerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breast-cancer.app/breast-cancer";
+			};
+			name = Debug;
+		};
+		A7BB3D1F1CA2E4090007DD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "breast-cancerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LIKA.breast-cancerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breast-cancer.app/breast-cancer";
+			};
+			name = Release;
+		};
+		A7BB3D211CA2E4090007DD93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "breast-cancerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LIKA.breast-cancerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "breast-cancer";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A7BB3D221CA2E4090007DD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "breast-cancerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LIKA.breast-cancerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "breast-cancer";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7BB3CED1CA2E4080007DD93 /* Build configuration list for PBXProject "breast-cancer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7BB3D181CA2E4090007DD93 /* Debug */,
+				A7BB3D191CA2E4090007DD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7BB3D1A1CA2E4090007DD93 /* Build configuration list for PBXNativeTarget "breast-cancer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7BB3D1B1CA2E4090007DD93 /* Debug */,
+				A7BB3D1C1CA2E4090007DD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7BB3D1D1CA2E4090007DD93 /* Build configuration list for PBXNativeTarget "breast-cancerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7BB3D1E1CA2E4090007DD93 /* Debug */,
+				A7BB3D1F1CA2E4090007DD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7BB3D201CA2E4090007DD93 /* Build configuration list for PBXNativeTarget "breast-cancerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7BB3D211CA2E4090007DD93 /* Debug */,
+				A7BB3D221CA2E4090007DD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7BB3CEA1CA2E4080007DD93 /* Project object */;
+}
