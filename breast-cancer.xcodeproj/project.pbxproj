@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71164C01D10EF1B002DA9EF /* AtividadesCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71164BF1D10EF1B002DA9EF /* AtividadesCellLayout.swift */; };
+		A71164C61D10F37E002DA9EF /* ConhecaCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71164C51D10F37E002DA9EF /* ConhecaCellLayout.swift */; };
+		A71164C81D11BD1C002DA9EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71164C71D11BD1C002DA9EF /* LoginViewController.swift */; };
+		A71164CA1D11BD64002DA9EF /* RegistrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71164C91D11BD64002DA9EF /* RegistrarViewController.swift */; };
+		A7A69DE11CA974DA00722C95 /* EngagementSDK in Resources */ = {isa = PBXBuildFile; fileRef = A7A69DE01CA974DA00722C95 /* EngagementSDK */; };
+		A7A69DE21CA974FE00722C95 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A69DDD1CA974C800722C95 /* ResearchKit.framework */; };
+		A7A69DE31CA974FE00722C95 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7A69DDD1CA974C800722C95 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A7A69DE71CA9751E00722C95 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A69DE61CA9751E00722C95 /* CoreLocation.framework */; };
+		A7A69DE91CA9752600722C95 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A69DE81CA9752600722C95 /* CFNetwork.framework */; };
+		A7A69DEB1CA9752D00722C95 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A69DEA1CA9752D00722C95 /* CoreTelephony.framework */; };
+		A7A69DED1CA9753600722C95 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A69DEC1CA9753600722C95 /* SystemConfiguration.framework */; };
+		A7A69DEF1CA9754800722C95 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A69DEE1CA9754800722C95 /* libxml2.tbd */; };
 		A7BB3D0B1CA2E4090007DD93 /* breast_cancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D0A1CA2E4090007DD93 /* breast_cancerTests.swift */; };
 		A7BB3D161CA2E4090007DD93 /* breast_cancerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D151CA2E4090007DD93 /* breast_cancerUITests.swift */; };
 		A7BB3D351CA2E4610007DD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D241CA2E4610007DD93 /* AppDelegate.swift */; };
@@ -26,11 +38,30 @@
 		A7BB3D431CA2E4610007DD93 /* InfograficosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D321CA2E4610007DD93 /* InfograficosViewController.swift */; };
 		A7BB3D441CA2E4610007DD93 /* ConhecaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D331CA2E4610007DD93 /* ConhecaTableViewController.swift */; };
 		A7BB3D451CA2E4610007DD93 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BB3D341CA2E4610007DD93 /* PerfilViewController.swift */; };
-		A7BB3D5A1CA2E5380007DD93 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BB3D571CA2E50B0007DD93 /* ResearchKit.framework */; };
-		A7BB3D5B1CA2E5390007DD93 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7BB3D571CA2E50B0007DD93 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A7A69DDC1CA974C800722C95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7A69DD61CA974C800722C95 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		A7A69DDE1CA974C800722C95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7A69DD61CA974C800722C95 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		A7A69DE41CA974FF00722C95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7A69DD61CA974C800722C95 /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
 		A7BB3D071CA2E4090007DD93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A7BB3CEA1CA2E4080007DD93 /* Project object */;
@@ -45,27 +76,6 @@
 			remoteGlobalIDString = A7BB3CF11CA2E4080007DD93;
 			remoteInfo = "breast-cancer";
 		};
-		A7BB3D561CA2E50B0007DD93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B183A5951A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
-		A7BB3D581CA2E50B0007DD93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
-			remoteInfo = ResearchKitTests;
-		};
-		A7BB3D5C1CA2E5390007DD93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,7 +85,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A7BB3D5B1CA2E5390007DD93 /* ResearchKit.framework in Embed Frameworks */,
+				A7A69DE31CA974FE00722C95 /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +93,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A71164BF1D10EF1B002DA9EF /* AtividadesCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadesCellLayout.swift; sourceTree = "<group>"; };
+		A71164C51D10F37E002DA9EF /* ConhecaCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConhecaCellLayout.swift; sourceTree = "<group>"; };
+		A71164C71D11BD1C002DA9EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A71164C91D11BD64002DA9EF /* RegistrarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrarViewController.swift; sourceTree = "<group>"; };
+		A7A69DD31CA9735A00722C95 /* Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		A7A69DD61CA974C800722C95 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+		A7A69DE01CA974DA00722C95 /* EngagementSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = EngagementSDK; path = mobileengagement/EngagementSDK; sourceTree = "<group>"; };
+		A7A69DE61CA9751E00722C95 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A7A69DE81CA9752600722C95 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A7A69DEA1CA9752D00722C95 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A7A69DEC1CA9753600722C95 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A7A69DEE1CA9754800722C95 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		A7BB3CF21CA2E4080007DD93 /* breast-cancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "breast-cancer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BB3D011CA2E4080007DD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7BB3D061CA2E4090007DD93 /* breast-cancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "breast-cancerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +131,6 @@
 		A7BB3D321CA2E4610007DD93 /* InfograficosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfograficosViewController.swift; sourceTree = "<group>"; };
 		A7BB3D331CA2E4610007DD93 /* ConhecaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConhecaTableViewController.swift; sourceTree = "<group>"; };
 		A7BB3D341CA2E4610007DD93 /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
-		A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +138,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7BB3D5A1CA2E5380007DD93 /* ResearchKit.framework in Frameworks */,
+				A7A69DEF1CA9754800722C95 /* libxml2.tbd in Frameworks */,
+				A7A69DED1CA9753600722C95 /* SystemConfiguration.framework in Frameworks */,
+				A7A69DEB1CA9752D00722C95 /* CoreTelephony.framework in Frameworks */,
+				A7A69DE91CA9752600722C95 /* CFNetwork.framework in Frameworks */,
+				A7A69DE71CA9751E00722C95 /* CoreLocation.framework in Frameworks */,
+				A7A69DE21CA974FE00722C95 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,11 +164,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7A69DD51CA9749000722C95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7A69DEE1CA9754800722C95 /* libxml2.tbd */,
+				A7A69DEC1CA9753600722C95 /* SystemConfiguration.framework */,
+				A7A69DEA1CA9752D00722C95 /* CoreTelephony.framework */,
+				A7A69DE81CA9752600722C95 /* CFNetwork.framework */,
+				A7A69DE61CA9751E00722C95 /* CoreLocation.framework */,
+				A7A69DE01CA974DA00722C95 /* EngagementSDK */,
+				A7A69DD61CA974C800722C95 /* ResearchKit.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7A69DD71CA974C800722C95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7A69DDD1CA974C800722C95 /* ResearchKit.framework */,
+				A7A69DDF1CA974C800722C95 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A7BB3CE91CA2E4080007DD93 = {
 			isa = PBXGroup;
 			children = (
-				A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */,
+				A7A69DD31CA9735A00722C95 /* Bridging.h */,
 				A7BB3CF41CA2E4080007DD93 /* breast-cancer */,
+				A7A69DD51CA9749000722C95 /* Frameworks */,
 				A7BB3D091CA2E4090007DD93 /* breast-cancerTests */,
 				A7BB3D141CA2E4090007DD93 /* breast-cancerUITests */,
 				A7BB3CF31CA2E4080007DD93 /* Products */,
@@ -175,9 +225,13 @@
 				A7BB3D2E1CA2E4610007DD93 /* Assets.xcassets */,
 				A7BB3D2F1CA2E4610007DD93 /* LaunchScreen.storyboard */,
 				A7BB3D301CA2E4610007DD93 /* Main.storyboard */,
+				A71164C71D11BD1C002DA9EF /* LoginViewController.swift */,
+				A71164C91D11BD64002DA9EF /* RegistrarViewController.swift */,
 				A7BB3D311CA2E4610007DD93 /* AtividadesTableViewController.swift */,
+				A71164BF1D10EF1B002DA9EF /* AtividadesCellLayout.swift */,
 				A7BB3D321CA2E4610007DD93 /* InfograficosViewController.swift */,
 				A7BB3D331CA2E4610007DD93 /* ConhecaTableViewController.swift */,
+				A71164C51D10F37E002DA9EF /* ConhecaCellLayout.swift */,
 				A7BB3D341CA2E4610007DD93 /* PerfilViewController.swift */,
 				A7BB3D011CA2E4080007DD93 /* Info.plist */,
 				A7BB3D231CA2E45F0007DD93 /* breast-cancer-Bridging-Header.h */,
@@ -203,15 +257,6 @@
 			path = "breast-cancerUITests";
 			sourceTree = "<group>";
 		};
-		A7BB3D511CA2E50B0007DD93 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A7BB3D571CA2E50B0007DD93 /* ResearchKit.framework */,
-				A7BB3D591CA2E50B0007DD93 /* ResearchKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,7 +272,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A7BB3D5D1CA2E5390007DD93 /* PBXTargetDependency */,
+				A7A69DE51CA974FF00722C95 /* PBXTargetDependency */,
 			);
 			name = "breast-cancer";
 			productName = "breast-cancer";
@@ -306,8 +351,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A7BB3D511CA2E50B0007DD93 /* Products */;
-					ProjectRef = A7BB3D501CA2E50B0007DD93 /* ResearchKit.xcodeproj */;
+					ProductGroup = A7A69DD71CA974C800722C95 /* Products */;
+					ProjectRef = A7A69DD61CA974C800722C95 /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -320,18 +365,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A7BB3D571CA2E50B0007DD93 /* ResearchKit.framework */ = {
+		A7A69DDD1CA974C800722C95 /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = A7BB3D561CA2E50B0007DD93 /* PBXContainerItemProxy */;
+			remoteRef = A7A69DDC1CA974C800722C95 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A7BB3D591CA2E50B0007DD93 /* ResearchKitTests.xctest */ = {
+		A7A69DDF1CA974C800722C95 /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = A7BB3D581CA2E50B0007DD93 /* PBXContainerItemProxy */;
+			remoteRef = A7A69DDE1CA974C800722C95 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -343,6 +388,7 @@
 			files = (
 				A7BB3D411CA2E4610007DD93 /* Main.storyboard in Resources */,
 				A7BB3D3F1CA2E4610007DD93 /* Assets.xcassets in Resources */,
+				A7A69DE11CA974DA00722C95 /* EngagementSDK in Resources */,
 				A7BB3D401CA2E4610007DD93 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,13 +418,17 @@
 				A7BB3D3C1CA2E4610007DD93 /* ResultTableViewProviders.swift in Sources */,
 				A7BB3D3E1CA2E4610007DD93 /* TextImageTableViewCell.swift in Sources */,
 				A7BB3D3A1CA2E4610007DD93 /* ChartTableViewCells.swift in Sources */,
+				A71164C01D10EF1B002DA9EF /* AtividadesCellLayout.swift in Sources */,
 				A7BB3D381CA2E4610007DD93 /* Task.swift in Sources */,
 				A7BB3D441CA2E4610007DD93 /* ConhecaTableViewController.swift in Sources */,
 				A7BB3D421CA2E4610007DD93 /* AtividadesTableViewController.swift in Sources */,
+				A71164C61D10F37E002DA9EF /* ConhecaCellLayout.swift in Sources */,
 				A7BB3D351CA2E4610007DD93 /* AppDelegate.swift in Sources */,
+				A71164CA1D11BD64002DA9EF /* RegistrarViewController.swift in Sources */,
 				A7BB3D361CA2E4610007DD93 /* ConsentDocument.swift in Sources */,
 				A7BB3D431CA2E4610007DD93 /* InfograficosViewController.swift in Sources */,
 				A7BB3D391CA2E4610007DD93 /* ChartDataSources.swift in Sources */,
+				A71164C81D11BD1C002DA9EF /* LoginViewController.swift in Sources */,
 				A7BB3D371CA2E4610007DD93 /* ExampleSurveyTask.swift in Sources */,
 				A7BB3D451CA2E4610007DD93 /* PerfilViewController.swift in Sources */,
 				A7BB3D3D1CA2E4610007DD93 /* ResultViewController.swift in Sources */,
@@ -404,6 +454,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A7A69DE51CA974FF00722C95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = A7A69DE41CA974FF00722C95 /* PBXContainerItemProxy */;
+		};
 		A7BB3D081CA2E4090007DD93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A7BB3CF11CA2E4080007DD93 /* breast-cancer */;
@@ -413,11 +468,6 @@
 			isa = PBXTargetDependency;
 			target = A7BB3CF11CA2E4080007DD93 /* breast-cancer */;
 			targetProxy = A7BB3D121CA2E4090007DD93 /* PBXContainerItemProxy */;
-		};
-		A7BB3D5D1CA2E5390007DD93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResearchKit;
-			targetProxy = A7BB3D5C1CA2E5390007DD93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -462,6 +512,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/leonardo/Desktop/breast-cancer/Bridging.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;

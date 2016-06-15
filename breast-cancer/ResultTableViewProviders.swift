@@ -32,7 +32,7 @@ import UIKit
 import ResearchKit
 import MapKit
 
-/**
+/*
     Create a `protocol<UITableViewDataSource, UITableViewDelegate>` that knows
     how to present the metadata for an `ORKResult` instance. Extra metadata is
     displayed for specific `ORKResult` types. For example, a table view provider

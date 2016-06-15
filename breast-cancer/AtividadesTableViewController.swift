@@ -14,7 +14,6 @@ class AtividadesTableViewController: UITableViewController {
     
     var atividadesTopicos = [String]()
     var tasks = Task.allCases
-    var backgroundColorCell : Bool = true
     
     @IBOutlet weak var dateLabel: UILabel!
     let currentDate = NSDate()
@@ -34,8 +33,7 @@ class AtividadesTableViewController: UITableViewController {
         currentDateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         dateLabel.text = currentDateFormatter.stringFromDate(currentDate)
         
-        atividadesTopicos = ["Consentimentos",
-                             "Questionário Diário",
+        atividadesTopicos = ["Questionário Diário",
                              "Questionário Semanal",
                              "Questionário Mensal",
                              "Diário Pessoal"]
@@ -51,20 +49,18 @@ class AtividadesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("atividadesCell", forIndexPath: indexPath)
+        let cell : AtividadesCellLayout = self.tableView.dequeueReusableCellWithIdentifier("atividadesCell", forIndexPath: indexPath) as! AtividadesCellLayout
         
         let taskListRow = tasks[indexPath.row]
-        cell.textLabel!.text = "\(taskListRow)"
-        cell.textLabel!.font = UIFont.systemFontOfSize(17.0)
-        cell.textLabel!.textColor = UIColor.darkGrayColor()
-        if(backgroundColorCell) //Toggle background color
+        cell.atividadesCellImage.image = UIImage(named: "atividadeNaoFinalizada")
+        cell.atividadesCellLabel.text = "\(taskListRow)"
+        if((indexPath.row%2) == 0) //Toggle background color
         {
             cell.backgroundColor = UIColor(red: 252.0/255.0, green: 235.0/255, blue: 243.0/255.0, alpha: 1.0)
-            backgroundColorCell = false
         }
         else
         {
-            backgroundColorCell = true
+            cell.backgroundColor = UIColor.whiteColor()
         }
         
         return cell
@@ -111,7 +107,7 @@ extension AtividadesTableViewController : ORKTaskViewControllerDelegate {
         print("Results of the Task")
         
         //Displaying results in a table
-        taskResultFinishedCompletionHandler!(taskViewController.result)
+        //taskResultFinishedCompletionHandler!(taskViewController.result)
         
         switch(reason){
         case .Completed:
@@ -145,32 +141,15 @@ extension AtividadesTableViewController : ORKTaskViewControllerDelegate {
                         print("Choice Format --> Identifier: \(a.identifier), Answer: \(a.choiceAnswers)")
                     }
                 }
-                else if let _ = thisStepResult.results as? [ORKConsentSignatureResult]
-                {
-                    // CREATING .PDF WITH DOCUMENT CONSENT
-                    print("Initializing .pdf consent document creation")
-                    let signatureResult : ORKConsentSignatureResult = taskResults.stepResultForStepIdentifier("ConsentReviewStep")?.firstResult as! ORKConsentSignatureResult
-                    let document = ConsentDocument.copy() as! ORKConsentDocument
-                    signatureResult.applyToDocument(document)
-                    print("\(signatureResult)")
-                    document.makePDFWithCompletionHandler({ (pdfData: NSData?, error: NSError?) -> Void in
-                        
-                        print("It is here!!!!")
-                        var docURL = (NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)).last as! NSURL!
-                        docURL = docURL?.URLByAppendingPathComponent( "Consentimento.pdf")
-                        
-                        print("\(docURL)")
-                        //write your file to the disk.
-                        pdfData?.writeToURL(docURL!, atomically: true)
-                        //now you can see that pdf in your applications directory
-                    })
-
-                }
             }
             break
+        
+        case .Saved:
+            print("Results Saved!")
+            break;
             
-        case .Saved, .Discarded, .Failed:
-            print("Results Saved, Discarded OR Failed!")
+        case .Discarded, .Failed:
+            print("Results Discarded OR Failed!")
             break
         }
         

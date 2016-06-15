@@ -12,7 +12,6 @@ import ResearchKit
 class ConhecaTableViewController: UITableViewController {
     
     var atividades = [String]()
-    var backgroundColorCell: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,20 +40,23 @@ class ConhecaTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("CellConheca", forIndexPath: indexPath) as UITableViewCell
+        let cell : ConhecaCellLayout = self.tableView.dequeueReusableCellWithIdentifier("CellConheca", forIndexPath: indexPath) as! ConhecaCellLayout
+        
         var atividades : String
         atividades = self.atividades[indexPath.row]
-        cell.textLabel?.text = atividades
-        cell.textLabel!.font = UIFont.systemFontOfSize(17.0)
-        cell .textLabel!.textColor = UIColor.darkGrayColor()
-        if (backgroundColorCell)
+        //cell.conhecaCellImage.image = UIImage(named: "conhecaCellImage\(indexPath.row)")
+        let myImage : UIImage = UIImage(named: "conhecaCellImage\(indexPath.row)")!
+        let tintableImage = myImage.imageWithRenderingMode(.AlwaysTemplate)
+        cell.conhecaCellImage.image = tintableImage
+        cell.conhecaCellImage.tintColor = UIColor(red: 231.0/255.0, green: 49.0/255.0, blue: 149.0/255.0, alpha: 1.0)
+        cell.conhecaCellLabel.text = atividades
+        if ((indexPath.row%2) == 0)
         {
             cell.backgroundColor = UIColor(red: 252.0/255.0, green: 235.0/255, blue: 243.0/255.0, alpha: 1.0)
-            backgroundColorCell = false
         }
         else
         {
-            backgroundColorCell = true
+            cell.backgroundColor = UIColor.whiteColor()
         }
         return cell
     }

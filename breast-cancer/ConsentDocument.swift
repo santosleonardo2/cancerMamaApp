@@ -33,37 +33,37 @@ public var ConsentDocument: ORKConsentDocument {
     
     let dataGathering = ORKConsentSection(type: .DataGathering)
     dataGathering.summary = "Nessa pesquisa, vão ser coletados alguns dados de seu dia-a-dia."
-    dataGathering.content = "..."
+    dataGathering.content = "Informação sobre coleta de dados."
     consentSections += [dataGathering]
     
     let privacy =  ORKConsentSection(type: .Privacy)
     privacy.summary = "Todos os seus dados serão assegurados."
-    privacy.content = "|||"
+    privacy.content = "Informação sobre privacidade."
     consentSections += [privacy]
     
     let dataUse = ORKConsentSection(type: .DataUse)
     dataUse.summary = "Seus dados serão utilizados para uma pesquisa."
-    dataUse.content = ".}}"
+    dataUse.content = "Informação sobre dados compartilhados."
     consentSections += [dataUse]
     
     let timeCommitment = ORKConsentSection(type: .TimeCommitment)
     timeCommitment.summary = "Essa pesquisa vai usar de seu tempo!"
-    timeCommitment.content = "..."
+    timeCommitment.content = "Informação sobre comprometimento com a pesquisa."
     consentSections += [timeCommitment]
     
     let studySurvey = ORKConsentSection(type: .StudySurvey)
     studySurvey.summary = "Essa pesquisa vai perguntar sua opnião."
-    studySurvey.content = "..."
+    studySurvey.content = "Informação sobre opinião."
     consentSections += [studySurvey]
     
     let studyTasks = ORKConsentSection(type: .StudyTasks)
     studyTasks.summary = "Essa pesquisa lhe dará tarefas para fazer"
-    studyTasks.content = "---"
+    studyTasks.content = "Informação sobre tarefas a fazer."
     consentSections += [studyTasks]
     
     let withdraw = ORKConsentSection(type: .Withdrawing)
     withdraw.summary = "A qualquer momento você pode se desvincular a pesquisa"
-    withdraw.content = "---"
+    withdraw.content = "Informação sobre sair da pesquisa."
     consentSections += [withdraw]
     
     consentDocument.sections = consentSections

@@ -38,3 +38,5 @@ class PieChartTableViewCell: UITableViewCell {
 class GraphChartTableViewCell: UITableViewCell {
     @IBOutlet weak var graphView: ORKGraphChartView!
 }
+
+class LineGraphChartTableViewCell: GraphChartTableViewCell { }

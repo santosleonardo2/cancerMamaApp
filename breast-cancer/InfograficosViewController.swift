@@ -18,7 +18,11 @@ class InfograficosViewController: UITableViewController {
     let pieChartDataSource = PieChartDataSource()
     let pieChartIdentifier = "PieChartCell"
     var pieChartTableViewCell: PieChartTableViewCell!
-    
+
+    let lineGraphChartDataSource = LineGraphDataSource()
+    let lineGraphChartIdentifier = "LineGraphChartCell"
+    var lineGraphChartTableViewCell: LineGraphChartTableViewCell!
+
     var chartTableViewCells: [UITableViewCell]!
     
     override func viewDidLoad() {
@@ -38,14 +42,18 @@ class InfograficosViewController: UITableViewController {
         pieChartView.text = "Hoje"
         pieChartView.lineWidth = 14
         
-        chartTableViewCells = [pieChartTableViewCell]
+        // ORKLineGraphChartView
+        lineGraphChartTableViewCell = tableView.dequeueReusableCellWithIdentifier(lineGraphChartIdentifier) as! LineGraphChartTableViewCell
+        let lineGraphChartView = lineGraphChartTableViewCell.graphView as! ORKLineGraphChartView
+        lineGraphChartView.dataSource = lineGraphChartDataSource
+        lineGraphChartView.tintColor = UIColor(red: 239/255, green: 162/255, blue: 199/255, alpha: 1)
+        // Optional custom configuration
+        lineGraphChartView.showsHorizontalReferenceLines = true
+        lineGraphChartView.showsVerticalReferenceLines = true
+        
+        chartTableViewCells = [pieChartTableViewCell, lineGraphChartTableViewCell]
+        
         tableView.tableFooterView = UIView(frame: CGRectZero)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        print("MEMORY WARNING!!!")
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,17 +68,7 @@ class InfograficosViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         pieChartTableViewCell.pieChartView.animateWithDuration(0.5)
+        lineGraphChartTableViewCell.graphView.animateWithDuration(0.5)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
 }
 

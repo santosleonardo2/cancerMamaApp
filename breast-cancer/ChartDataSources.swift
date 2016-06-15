@@ -33,10 +33,11 @@ import ResearchKit
 class PieChartDataSource: NSObject, ORKPieChartViewDataSource
 {
     let colors = [
-        UIColor(red: 217/225, green: 217/255, blue: 217/225, alpha: 1),
+        UIColor(red: 239/225, green: 162/255, blue: 199/225, alpha: 1),
         UIColor(red: 142/255, green: 142/255, blue: 147/255, alpha: 1)
     ]
     let values = [65.0, 35.0]
+    let titleForSegmenteText = ["Atividades Finalizadas", "Atividades a fazer"]
     
     func numberOfSegmentsInPieChartView(pieChartView: ORKPieChartView ) -> Int {
         return colors.count
@@ -51,13 +52,53 @@ class PieChartDataSource: NSObject, ORKPieChartViewDataSource
     }
     
     func pieChartView(pieChartView: ORKPieChartView, titleForSegmentAtIndex index: Int) -> String {
-        if(index == 0)
-        {
-            return "Atividades finalizadas"
-        }
-        else
-        {
-            return "Atividades à fazer"
-        }
+        return titleForSegmenteText[index]
+    }
+}
+
+class LineGraphDataSource: NSObject, ORKGraphChartViewDataSource {
+    
+    var plotPoints =
+    [
+        [
+            ORKRangedPoint(value: 10),
+            ORKRangedPoint(value: 20),
+            ORKRangedPoint(value: 25),
+            ORKRangedPoint(),
+            ORKRangedPoint(value: 30),
+            ORKRangedPoint(value: 40),
+        ],
+        [
+            ORKRangedPoint(value: 2),
+            ORKRangedPoint(value: 4),
+            ORKRangedPoint(value: 8),
+            ORKRangedPoint(value: 16),
+            ORKRangedPoint(value: 32),
+            ORKRangedPoint(value: 64),
+        ]
+    ]
+    
+    func numberOfPlotsInGraphChartView(graphChartView: ORKGraphChartView) -> Int {
+        return plotPoints.count
+    }
+    
+    func graphChartView(graphChartView: ORKGraphChartView, pointForPointIndex pointIndex: Int, plotIndex: Int) -> ORKRangedPoint {
+        return plotPoints[plotIndex][pointIndex]
+    }
+    
+    func graphChartView(graphChartView: ORKGraphChartView, numberOfPointsForPlotIndex plotIndex: Int) -> Int {
+        return plotPoints[plotIndex].count
+    }
+    
+    func maximumValueForGraphChartView(graphChartView: ORKGraphChartView) -> CGFloat {
+        return 70
+    }
+    
+    func minimumValueForGraphChartView(graphChartView: ORKGraphChartView) -> CGFloat {
+        return 0
+    }
+    
+    func graphChartView(graphChartView: ORKGraphChartView, titleForXAxisAtPointIndex pointIndex: Int) -> String? {
+        return "\(pointIndex + 1)"
     }
 }

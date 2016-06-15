@@ -20,7 +20,7 @@ enum Task : Int, CustomStringConvertible {
     
     //Return an array with all tasks
     static var allCases : [Task] {
-        return [.Consent, .DailySurvey, .WeeklySurvey, .MonthlySurvey, .Diary]
+        return [.DailySurvey, .WeeklySurvey, .MonthlySurvey, .Diary]
     }
     
     

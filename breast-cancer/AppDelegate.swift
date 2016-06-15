@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var tabBarController: UITabBarController {
+    /*var tabBarController: UITabBarController {
         return window!.rootViewController as! UITabBarController
     }
     
@@ -25,11 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     var resultViewController: ResultViewController? {
-        let navigationController = tabBarController.viewControllers![4] as! UINavigationController
+        //let navigationController = tabBarController.viewControllers![4] as! UINavigationController
         
         // Find the `ResultViewController` (if any) that's a view controller in the navigation controller.
         return navigationController.viewControllers.filter { $0 is ResultViewController }.first as? ResultViewController
-    }
+    }*/
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // When a task result has been finished, update the result view controller's task result.
-        atividadesTableViewController.taskResultFinishedCompletionHandler = { [unowned self] taskResult in
+        /*atividadesTableViewController.taskResultFinishedCompletionHandler = { [unowned self] taskResult in
             /*
             If we're displaying a new result, make sure the result view controller's
             navigation controller is at the root.
@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             // Set the result so we can display it.
             self.resultViewController?.result = taskResult
-        }
+        }*/
 
         return true
     }
