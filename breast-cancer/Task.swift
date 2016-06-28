@@ -16,11 +16,12 @@ enum Task : Int, CustomStringConvertible {
     case WeeklySurvey
     case MonthlySurvey
     case Diary
+    case Resveratrol
     
     
     //Return an array with all tasks
     static var allCases : [Task] {
-        return [.DailySurvey, .WeeklySurvey, .MonthlySurvey, .Diary]
+        return [.DailySurvey, .WeeklySurvey, .MonthlySurvey, .Diary, .Resveratrol]
     }
     
     
@@ -41,6 +42,9 @@ enum Task : Int, CustomStringConvertible {
             
         case .Diary:
             return NSLocalizedString("Diário", comment: "")
+        
+        case .Resveratrol:
+            return NSLocalizedString("Resveratrol", comment: "")
         }
     }
     
@@ -62,6 +66,9 @@ enum Task : Int, CustomStringConvertible {
             
         case .Diary:
             return diaryTask
+        
+        case .Resveratrol:
+            return resveratrolTask
             
         default:
             return emptyTask
@@ -91,7 +98,6 @@ enum Task : Int, CustomStringConvertible {
         reviewConsentStep.text = "Informações de consentimento"
         reviewConsentStep.reasonForConsent = "Você concorda com os termos da pesquisa?"
         steps += [reviewConsentStep]
-        
         
         return ORKOrderedTask(identifier: "ConsentTasks", steps: steps)
     }
@@ -292,5 +298,69 @@ enum Task : Int, CustomStringConvertible {
         steps += [feelingStep]
         
         return ORKOrderedTask(identifier: "Diary", steps: steps)
+    }
+    
+    
+    public var resveratrolTask : ORKOrderedTask {
+        var steps = [ORKStep]()
+        
+        let introStep = ORKInstructionStep(identifier: "Intro Q Resveratrol")
+        introStep.title = NSLocalizedString("Resveratrol", comment: "")
+        introStep.text = NSLocalizedString("Siga as instruções a seguir para responder cada pergunta.", comment: "")
+        steps += [introStep]
+        
+        let q1 = ORKQuestionStep(identifier: "Q1 Resveratrol", title: "Remédio", answer: ORKBooleanAnswerFormat())
+        q1.text = NSLocalizedString("Lembrei de tomar a medicação tamoxifeno e resveratrol ontem?", comment: "")
+        steps += [q1]
+        
+        let q2 = ORKQuestionStep(identifier: "Q2 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
+        q2.text = NSLocalizedString("Tive diarréia hoje?", comment: "")
+        steps += [q2]
+        
+        let q2_2 = ORKQuestionStep(identifier: "Q2-2 Resveratrol", title: "Sintomas", answer: ORKScaleAnswerFormat(maximumValue: 7, minimumValue: 0, defaultValue: 0, step: 1, vertical: true))
+        q2_2.text = NSLocalizedString("Quantas vezes tive diarréia?", comment: "")
+        steps += [q2_2]
+        
+        let q3 = ORKQuestionStep(identifier: "Q3 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
+        q3.text = NSLocalizedString("Tive nauseas ou enjôo hoje?", comment: "")
+        steps += [q3]
+        
+        let q3_2 = ORKQuestionStep(identifier: "Q3-2 Resveratrol", title: "Sintomas", answer: ORKScaleAnswerFormat(maximumValue: 7, minimumValue: 0, defaultValue: 0, step: 1, vertical: true))
+        q3_2.text = NSLocalizedString("Quantas vezes tive nauseas ou enjôo?", comment: "")
+        steps += [q3_2]
+        
+        let q3_3 = ORKQuestionStep(identifier: "Q3-3 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
+        q3_3.text = NSLocalizedString("Isso me impediu de me alimentar bem hoje?", comment: "")
+        steps += [q3_3]
+        
+        let q4 = ORKQuestionStep(identifier: "Q4 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
+        q4.text = NSLocalizedString("Apresentei ondas de calor hoje?", comment: "")
+        steps += [q4]
+        
+        let q4_2 = ORKQuestionStep(identifier: "Q4-2 Resveratrol", title: "Sintomas", answer: ORKScaleAnswerFormat(maximumValue: 7, minimumValue: 0, defaultValue: 0, step: 1, vertical: true))
+        q4_2.text = NSLocalizedString("Quantas vezes apresentei ondas de calor?", comment: "")
+        steps += [q4_2]
+        
+        let q5 = ORKQuestionStep(identifier: "Q5 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
+        q5.text = NSLocalizedString("Senti dificuldade em urinar hoje?", comment: "")
+        steps += [q5]
+        
+        let q5_2 = ORKQuestionStep(identifier: "Q5-2 Resveratrol", title: "Sintomas", answer: ORKScaleAnswerFormat(maximumValue: 7, minimumValue: 0, defaultValue: 0, step: 1, vertical: true))
+        q5_2.text = NSLocalizedString("Quantas vezes senti dificuldades de urinar ao dia?", comment: "")
+        steps += [q5_2]
+        
+        let q6 = ORKQuestionStep(identifier: "Q6 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
+        q6.text = NSLocalizedString("Apresentei edema (inchaço) nas pernas ou pés?", comment: "")
+        steps += [q6]
+        
+        let q6_2 = ORKQuestionStep(identifier: "Q6-2 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
+        q6_2.text = NSLocalizedString("Isso aconteceu em apenas uma perna ou pé?", comment: "")
+        steps += [q6_2]
+        
+        let q7 = ORKQuestionStep(identifier: "Q7 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
+        q7.text = NSLocalizedString("Estou mestruada hoje?", comment: "")
+        steps += [q7]
+        
+        return ORKOrderedTask(identifier: "ResveratrolTask", steps: steps)
     }
 }

@@ -36,7 +36,8 @@ class AtividadesTableViewController: UITableViewController {
         atividadesTopicos = ["Questionário Diário",
                              "Questionário Semanal",
                              "Questionário Mensal",
-                             "Diário Pessoal"]
+                             "Diário Pessoal",
+                             "Resveratrol"]
     }
     
     
@@ -105,9 +106,6 @@ extension AtividadesTableViewController : ORKTaskViewControllerDelegate {
          */
         
         print("Results of the Task")
-        
-        //Displaying results in a table
-        //taskResultFinishedCompletionHandler!(taskViewController.result)
         
         switch(reason){
         case .Completed:

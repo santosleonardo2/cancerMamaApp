@@ -83,20 +83,15 @@ extension RegistrarViewController : ORKTaskViewControllerDelegate {
             break
         }
         
-        print("Finalizou swhich!")
         //Go back to main viewController
         if(reason == .Completed) {
-            print("Entrou no lugar certo")
             //Moving to app main windown
             taskViewController.dismissViewControllerAnimated(true, completion: nil)
-            print("fez o dismiss...")
             let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
             let mainView : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("menuPrincipal")
             presentViewController(mainView, animated: true, completion: nil)
-            print("Terminou lugar certo!!!")
         }
         else {
-            print("Entrou no dismissViewController")
             taskViewController.dismissViewControllerAnimated(true, completion: nil)
         }
     }
