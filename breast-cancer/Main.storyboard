@@ -690,7 +690,7 @@
         <!--Login-->
         <scene sceneID="1HC-S4-LMt">
             <objects>
-                <viewController storyboardIdentifier="LoginView" id="Sbh-Mb-OZ0" userLabel="Login" customClass="LoginViewController" customModule="breast_cancer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Sbh-Mb-OZ0" userLabel="Login" customClass="LoginViewController" customModule="breast_cancer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xje-jP-KfJ"/>
                         <viewControllerLayoutGuide type="bottom" id="mXN-ah-Pql"/>
@@ -1148,7 +1148,7 @@
         <!--Navigation Controller-->
         <scene sceneID="p8E-gf-x73">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pmj-cG-X8e" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginView" automaticallyAdjustsScrollViewInsets="NO" id="Pmj-cG-X8e" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WDo-RW-VPa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
