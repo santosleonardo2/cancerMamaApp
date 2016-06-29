@@ -13,9 +13,17 @@ class RegistrarViewController : UIViewController{
 
     @IBOutlet weak var passwordLabel: UITextField!
     @IBOutlet weak var confirmPasswordLabel: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*registerButton.layer.borderWidth = 1.0
+        registerButton.layer.borderColor = UIColor(red: 229.0/255.0, green: 62.0/255.0, blue: 152.0/255.0, alpha: 1.0).CGColor
+        cancelButton.layer.borderWidth = 1.0
+        registerButton.layer.borderColor = UIColor(red: 229.0/255.0, green: 62.0/255.0, blue: 152.0/255.0, alpha: 1.0).CGColor
+        */
     }
     
     @IBAction func RegistrarButtonPressed(sender: AnyObject) {
@@ -31,7 +39,9 @@ class RegistrarViewController : UIViewController{
     }
     
     @IBAction func CancelarButtonPressed(sender: AnyObject) {
-        navigationController?.popToRootViewControllerAnimated(true)
+        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let mainView : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView")
+        presentViewController(mainView, animated: true, completion: nil)
     }
 }
 

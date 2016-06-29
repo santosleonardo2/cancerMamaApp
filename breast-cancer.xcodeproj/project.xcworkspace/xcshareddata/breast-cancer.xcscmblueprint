@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "146C5A4E2C55CB7E91937DEBF6059D04574B608A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "146C5A4E2C55CB7E91937DEBF6059D04574B608A" : 0,
+    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D5FD6BBD-04FD-43BA-8706-DB3CCA715B49",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "146C5A4E2C55CB7E91937DEBF6059D04574B608A" : "breast-cancer\/",
+    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : "breast-cancer\/ResearchKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "breast-cancer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "breast-cancer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/santosleonardo2\/cancerMamaApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "146C5A4E2C55CB7E91937DEBF6059D04574B608A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ResearchKit\/ResearchKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9CF6181E3789E3853840089C16D4B9FDDB9B31E2"
+    }
+  ]
+}

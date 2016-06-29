@@ -11,6 +11,8 @@
 		A71164C61D10F37E002DA9EF /* ConhecaCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71164C51D10F37E002DA9EF /* ConhecaCellLayout.swift */; };
 		A71164C81D11BD1C002DA9EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71164C71D11BD1C002DA9EF /* LoginViewController.swift */; };
 		A71164CA1D11BD64002DA9EF /* RegistrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71164C91D11BD64002DA9EF /* RegistrarViewController.swift */; };
+		A71164CC1D2374CE002DA9EF /* introViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71164CB1D2374CE002DA9EF /* introViewController.swift */; };
+		A71164CE1D237A74002DA9EF /* introUIPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71164CD1D237A74002DA9EF /* introUIPageViewController.swift */; };
 		A7A69DE11CA974DA00722C95 /* EngagementSDK in Resources */ = {isa = PBXBuildFile; fileRef = A7A69DE01CA974DA00722C95 /* EngagementSDK */; };
 		A7A69DE21CA974FE00722C95 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A69DDD1CA974C800722C95 /* ResearchKit.framework */; };
 		A7A69DE31CA974FE00722C95 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7A69DDD1CA974C800722C95 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -93,6 +95,8 @@
 		A71164C51D10F37E002DA9EF /* ConhecaCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConhecaCellLayout.swift; sourceTree = "<group>"; };
 		A71164C71D11BD1C002DA9EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A71164C91D11BD64002DA9EF /* RegistrarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrarViewController.swift; sourceTree = "<group>"; };
+		A71164CB1D2374CE002DA9EF /* introViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = introViewController.swift; sourceTree = "<group>"; };
+		A71164CD1D237A74002DA9EF /* introUIPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = introUIPageViewController.swift; sourceTree = "<group>"; };
 		A7A69DD31CA9735A00722C95 /* Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		A7A69DD61CA974C800722C95 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		A7A69DE01CA974DA00722C95 /* EngagementSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = EngagementSDK; path = mobileengagement/EngagementSDK; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				A7BB3D2E1CA2E4610007DD93 /* Assets.xcassets */,
 				A7BB3D2F1CA2E4610007DD93 /* LaunchScreen.storyboard */,
 				A7BB3D301CA2E4610007DD93 /* Main.storyboard */,
+				A71164CB1D2374CE002DA9EF /* introViewController.swift */,
+				A71164CD1D237A74002DA9EF /* introUIPageViewController.swift */,
 				A71164C71D11BD1C002DA9EF /* LoginViewController.swift */,
 				A71164C91D11BD64002DA9EF /* RegistrarViewController.swift */,
 				A7BB3D311CA2E4610007DD93 /* AtividadesTableViewController.swift */,
@@ -402,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71164CE1D237A74002DA9EF /* introUIPageViewController.swift in Sources */,
 				A7BB3D3A1CA2E4610007DD93 /* ChartTableViewCells.swift in Sources */,
 				A71164C01D10EF1B002DA9EF /* AtividadesCellLayout.swift in Sources */,
 				A7BB3D381CA2E4610007DD93 /* Task.swift in Sources */,
@@ -413,6 +420,7 @@
 				A7BB3D361CA2E4610007DD93 /* ConsentDocument.swift in Sources */,
 				A7BB3D431CA2E4610007DD93 /* InfograficosViewController.swift in Sources */,
 				A7BB3D391CA2E4610007DD93 /* ChartDataSources.swift in Sources */,
+				A71164CC1D2374CE002DA9EF /* introViewController.swift in Sources */,
 				A71164C81D11BD1C002DA9EF /* LoginViewController.swift in Sources */,
 				A7BB3D371CA2E4610007DD93 /* ExampleSurveyTask.swift in Sources */,
 				A7BB3D451CA2E4610007DD93 /* PerfilViewController.swift in Sources */,
