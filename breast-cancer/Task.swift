@@ -111,10 +111,27 @@ enum Task : Int, CustomStringConvertible {
         introStep.text = NSLocalizedString("Siga as instruções a seguir para responder cada pergunta.", comment: "")
         steps += [introStep]
         
-        let firstQuestion = ORKQuestionStep(identifier: "Q1 Diario", title: "Remédios", answer: ORKBooleanAnswerFormat())
-        firstQuestion.text = NSLocalizedString("Você tomou seus medicamentos hoje?", comment: "")
-        steps += [firstQuestion]
         
+        
+        // Branching paths
+        var answerFormat: ORKAnswerFormat
+        var step: ORKStep
+        var textChoices: [ORKTextChoice]
+        var questionStep: ORKQuestionStep
+        
+        textChoices = [
+            ORKTextChoice(text: "Sim", value: "sim"),
+            ORKTextChoice(text: "Não", value: "nao")
+        ]
+        
+        answerFormat = ORKTextChoiceAnswerFormat(style: .SingleChoice, textChoices: textChoices)
+        
+        questionStep = ORKQuestionStep(identifier: "Q1 Diario", title: "Remédios", answer: answerFormat)
+        questionStep.optional = false
+        questionStep.text = NSLocalizedString("Você tomou seus medicamentos hoje?", comment: "")
+        steps += [questionStep]
+        
+
         //Case answer is NO
         let firstQuestionNo = ORKQuestionStep(identifier: "Q2 se Q1 NAO", title: "Remédios", answer: ORKBooleanAnswerFormat())
         firstQuestionNo.text = NSLocalizedString("Você deixou de tomar seus medicamentos hoje porque estava se sentindo bem?", comment: "")
@@ -137,7 +154,24 @@ enum Task : Int, CustomStringConvertible {
         summaryStep.text = NSLocalizedString("Seus dados foram coletados. Obrigado por participar da nossa pesquisa!", comment: "")
         steps += [summaryStep]
         
-        return ORKOrderedTask(identifier: "Tarefa Questionario Diario", steps: steps)
+        // Build Navigation Rules
+        let resultSelector: ORKResultSelector
+        let predicateRule: ORKPredicateStepNavigationRule
+        let directRule: ORKDirectStepNavigationRule
+        
+        
+        // From the branching step, go to either sclaeStep or textChoiceStep
+        resultSelector = ORKResultSelector(resultIdentifier: "Q1 Diario")
+        let predicateAnswerType = ORKResultPredicate.predicateForChoiceQuestionResultWithResultSelector(resultSelector, expectedAnswerValue: "sim")
+        
+        predicateRule = ORKPredicateStepNavigationRule(resultPredicates: [predicateAnswerType],
+            destinationStepIdentifiers: ["Sumario Diario"],
+            defaultStepIdentifier: "Q2 se Q1 NAO",
+            validateArrays: true)
+        
+        var task = ORKNavigableOrderedTask(identifier: "Tarefa Questionario Diario", steps: steps)
+        task.setNavigationRule(predicateRule, forTriggerStepIdentifier: "Q1 Diario")
+        return task
     }
     
     
@@ -313,17 +347,34 @@ enum Task : Int, CustomStringConvertible {
         q1.text = NSLocalizedString("Lembrei de tomar a medicação tamoxifeno e resveratrol ontem?", comment: "")
         steps += [q1]
         
-        let q2 = ORKQuestionStep(identifier: "Q2 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
-        q2.text = NSLocalizedString("Tive diarréia hoje?", comment: "")
-        steps += [q2]
+        
+        // Branching paths
+        var answerFormat: ORKAnswerFormat
+        var step: ORKStep
+        var textChoices: [ORKTextChoice]
+        var questionStep: ORKQuestionStep
+        
+        textChoices = [
+            ORKTextChoice(text: "Sim", value: "sim"),
+            ORKTextChoice(text: "Não", value: "nao")
+        ]
+        
+        answerFormat = ORKTextChoiceAnswerFormat(style: .SingleChoice, textChoices: textChoices)
+        
+        questionStep = ORKQuestionStep(identifier: "Q2 Resveratrol", title: "Medicamentos", answer: answerFormat)
+        questionStep.optional = false
+        questionStep.text = NSLocalizedString("Tive diarréia hoje?", comment: "")
+        steps += [questionStep]
+        
         
         let q2_2 = ORKQuestionStep(identifier: "Q2-2 Resveratrol", title: "Sintomas", answer: ORKScaleAnswerFormat(maximumValue: 7, minimumValue: 0, defaultValue: 0, step: 1, vertical: true))
         q2_2.text = NSLocalizedString("Quantas vezes tive diarréia?", comment: "")
         steps += [q2_2]
         
-        let q3 = ORKQuestionStep(identifier: "Q3 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
-        q3.text = NSLocalizedString("Tive nauseas ou enjôo hoje?", comment: "")
-        steps += [q3]
+        questionStep = ORKQuestionStep(identifier: "Q3 Resveratrol", title: "Sintomas", answer: answerFormat)
+        questionStep.optional = false
+        questionStep.text = NSLocalizedString("Tive nauseas ou enjôo hoje?", comment: "")
+        steps += [questionStep]
         
         let q3_2 = ORKQuestionStep(identifier: "Q3-2 Resveratrol", title: "Sintomas", answer: ORKScaleAnswerFormat(maximumValue: 7, minimumValue: 0, defaultValue: 0, step: 1, vertical: true))
         q3_2.text = NSLocalizedString("Quantas vezes tive nauseas ou enjôo?", comment: "")
@@ -333,25 +384,28 @@ enum Task : Int, CustomStringConvertible {
         q3_3.text = NSLocalizedString("Isso me impediu de me alimentar bem hoje?", comment: "")
         steps += [q3_3]
         
-        let q4 = ORKQuestionStep(identifier: "Q4 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
-        q4.text = NSLocalizedString("Apresentei ondas de calor hoje?", comment: "")
-        steps += [q4]
+        questionStep = ORKQuestionStep(identifier: "Q4 Resveratrol", title: "Sintomas", answer: answerFormat)
+        questionStep.optional = false
+        questionStep.text = NSLocalizedString("Apresentei ondas de calor hoje?", comment: "")
+        steps += [questionStep]
         
         let q4_2 = ORKQuestionStep(identifier: "Q4-2 Resveratrol", title: "Sintomas", answer: ORKScaleAnswerFormat(maximumValue: 7, minimumValue: 0, defaultValue: 0, step: 1, vertical: true))
         q4_2.text = NSLocalizedString("Quantas vezes apresentei ondas de calor?", comment: "")
         steps += [q4_2]
         
-        let q5 = ORKQuestionStep(identifier: "Q5 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
-        q5.text = NSLocalizedString("Senti dificuldade em urinar hoje?", comment: "")
-        steps += [q5]
+        questionStep = ORKQuestionStep(identifier: "Q5 Resveratrol", title: "Sintomas", answer: answerFormat)
+        questionStep.optional = false
+        questionStep.text = NSLocalizedString("Senti dificuldade em urinar hoje?", comment: "")
+        steps += [questionStep]
         
         let q5_2 = ORKQuestionStep(identifier: "Q5-2 Resveratrol", title: "Sintomas", answer: ORKScaleAnswerFormat(maximumValue: 7, minimumValue: 0, defaultValue: 0, step: 1, vertical: true))
         q5_2.text = NSLocalizedString("Quantas vezes senti dificuldades de urinar ao dia?", comment: "")
         steps += [q5_2]
         
-        let q6 = ORKQuestionStep(identifier: "Q6 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
-        q6.text = NSLocalizedString("Apresentei edema (inchaço) nas pernas ou pés?", comment: "")
-        steps += [q6]
+        questionStep = ORKQuestionStep(identifier: "Q6 Resveratrol", title: "Sintomas", answer: answerFormat)
+        questionStep.optional = false
+        questionStep.text = NSLocalizedString("Apresentei edema (inchaço) nas pernas ou pés?", comment: "")
+        steps += [questionStep]
         
         let q6_2 = ORKQuestionStep(identifier: "Q6-2 Resveratrol", title: "Sintomas", answer: ORKBooleanAnswerFormat())
         q6_2.text = NSLocalizedString("Isso aconteceu em apenas uma perna ou pé?", comment: "")
@@ -361,6 +415,65 @@ enum Task : Int, CustomStringConvertible {
         q7.text = NSLocalizedString("Estou mestruada hoje?", comment: "")
         steps += [q7]
         
-        return ORKOrderedTask(identifier: "ResveratrolTask", steps: steps)
+        
+        // Build Navigation Rules
+        var resultSelector: ORKResultSelector
+        var predicateRule: ORKPredicateStepNavigationRule
+        var directRule: ORKDirectStepNavigationRule
+        
+        
+        // From the branching step, go to either sclaeStep or textChoiceStep
+        resultSelector = ORKResultSelector(resultIdentifier: "Q2 Resveratrol")
+        var predicateAnswerType = ORKResultPredicate.predicateForChoiceQuestionResultWithResultSelector(resultSelector, expectedAnswerValue: "sim")
+        
+        predicateRule = ORKPredicateStepNavigationRule(resultPredicates: [predicateAnswerType],
+            destinationStepIdentifiers: ["Q2-2 Resveratrol"],
+            defaultStepIdentifier: "Q3 Resveratrol",
+            validateArrays: true)
+        
+        var task = ORKNavigableOrderedTask(identifier: "Resveratrol Task", steps: steps)
+        task.setNavigationRule(predicateRule, forTriggerStepIdentifier: "Q2 Resveratrol")
+        
+        // From the branching step, go to either sclaeStep or textChoiceStep
+        resultSelector = ORKResultSelector(resultIdentifier: "Q3 Resveratrol")
+        predicateAnswerType = ORKResultPredicate.predicateForChoiceQuestionResultWithResultSelector(resultSelector, expectedAnswerValue: "sim")
+        
+        predicateRule = ORKPredicateStepNavigationRule(resultPredicates: [predicateAnswerType],
+            destinationStepIdentifiers: ["Q3-2 Resveratrol"],
+            defaultStepIdentifier: "Q4 Resveratrol",
+            validateArrays: true)
+        task.setNavigationRule(predicateRule, forTriggerStepIdentifier: "Q3 Resveratrol")
+        
+        // From the branching step, go to either sclaeStep or textChoiceStep
+        resultSelector = ORKResultSelector(resultIdentifier: "Q4 Resveratrol")
+        predicateAnswerType = ORKResultPredicate.predicateForChoiceQuestionResultWithResultSelector(resultSelector, expectedAnswerValue: "sim")
+        
+        predicateRule = ORKPredicateStepNavigationRule(resultPredicates: [predicateAnswerType],
+            destinationStepIdentifiers: ["Q4-2 Resveratrol"],
+            defaultStepIdentifier: "Q5 Resveratrol",
+            validateArrays: true)
+        task.setNavigationRule(predicateRule, forTriggerStepIdentifier: "Q4 Resveratrol")
+        
+        // From the branching step, go to either sclaeStep or textChoiceStep
+        resultSelector = ORKResultSelector(resultIdentifier: "Q5 Resveratrol")
+        predicateAnswerType = ORKResultPredicate.predicateForChoiceQuestionResultWithResultSelector(resultSelector, expectedAnswerValue: "sim")
+        
+        predicateRule = ORKPredicateStepNavigationRule(resultPredicates: [predicateAnswerType],
+            destinationStepIdentifiers: ["Q5-2 Resveratrol"],
+            defaultStepIdentifier: "Q6 Resveratrol",
+            validateArrays: true)
+        task.setNavigationRule(predicateRule, forTriggerStepIdentifier: "Q5 Resveratrol")
+        
+        // From the branching step, go to either sclaeStep or textChoiceStep
+        resultSelector = ORKResultSelector(resultIdentifier: "Q6 Resveratrol")
+        predicateAnswerType = ORKResultPredicate.predicateForChoiceQuestionResultWithResultSelector(resultSelector, expectedAnswerValue: "sim")
+        
+        predicateRule = ORKPredicateStepNavigationRule(resultPredicates: [predicateAnswerType],
+            destinationStepIdentifiers: ["Q6-2 Resveratrol"],
+            defaultStepIdentifier: "Q7 Resveratrol",
+            validateArrays: true)
+        task.setNavigationRule(predicateRule, forTriggerStepIdentifier: "Q6 Resveratrol")
+        
+        return task
     }
 }

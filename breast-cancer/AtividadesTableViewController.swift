@@ -37,7 +37,8 @@ class AtividadesTableViewController: UITableViewController {
                              "Questionário Semanal",
                              "Questionário Mensal",
                              "Diário Pessoal",
-                             "Resveratrol"]
+                             "Resveratrol",
+                             "Navigation Task Test"]
     }
     
     
